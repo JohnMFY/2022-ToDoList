@@ -1,0 +1,84 @@
+body {
+  background-color: #525659;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 80vh;
+}
+
+section {
+  background-color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 33%;
+  border: solid 4px #b30000;
+  border-radius: 5px;
+}
+
+section input {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  text-align: center;
+  width: 70%;
+  border: #525659 solid 2px;
+  outline: none;
+  border-radius: 15px;
+  padding: 20px;
+  -webkit-box-shadow: #525659 0px 10px 20px -5px;
+          box-shadow: #525659 0px 10px 20px -5px;
+}
+
+section input:hover {
+  border: orangered solid 2px;
+}
+
+section input:focus-visible {
+  border: orangered solid 2px;
+}
+
+article {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 90%;
+  margin: 5% 1%;
+  border: solid 1px #525659;
+  border-radius: 5px;
+}
+
+h1 {
+  font-size: 35px;
+}
+
+input {
+  font-size: 14px;
+}
+
+h4 {
+  font-size: 18px;
+}
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,39 @@
+body{
+    background-color: $background-color;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 80vh;
+}
+section{
+    background-color: lighten($background-color, 90%);
+    display: flex;
+    flex-flow:column nowrap ;
+    text-align: center;
+    align-items: center;
+    width: 33%;
+    border : solid 4px darken($red-color, 15%);
+    border-radius: 5px;
+    input{
+        align-self: center;
+        text-align: center;
+        width: 70%;
+        border: $background-color solid 2px;
+        outline: none;
+        border-radius: 15px;
+        padding: 20px 0px;
+        box-shadow: $background-color 0px 10px 20px -5px;
+    }
+    input:hover{ border: $hover-focus solid 2px;}
+    input:focus-visible{ border: $hover-focus solid 2px;}
+}
+article{
+    display: flex;
+    justify-content: space-around;
+    flex-flow: row nowrap;
+    align-items: center;
+    width: 90%;
+    margin: 5% 1%;
+    border: solid 1px $background-color;
+    border-radius: 5px;
+}
