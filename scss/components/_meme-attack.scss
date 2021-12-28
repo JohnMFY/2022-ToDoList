@@ -1,0 +1,18 @@
+.meme_attack{
+    position: absolute;
+    transform: scale3d(0%, 0%, 0%);
+    text-align: center;
+    color: white;
+    background-color: darken($delete-color, 20%);
+    padding: 40px 20px;
+    border-radius:100%;
+    border: dashed white 2px;
+}
+.meme_attack:hover{
+    border: white solid 2px;
+    background-color: lighten($delete-color, 10%);
+}
+.meme_attack:focus{
+    transform: scale3d(100%, 100%, 100%);
+    transition: 400ms ease-in;
+}
