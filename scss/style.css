@@ -57,11 +57,34 @@ article {
 }
 
 article:hover {
-  -webkit-box-shadow: 0px 0px 0px 1px;
-          box-shadow: 0px 0px 0px 1px;
+  -webkit-box-shadow: #9ea3a6 0px 1px 0px 1px;
+          box-shadow: #9ea3a6 0px 1px 0px 1px;
 }
 
-button {
+.add_btn {
+  margin: 3% 0% 0% 0%;
+  padding: 1.5%;
+  width: 25%;
+  border: #525659 solid 2px;
+  border-radius: 15px;
+  background-color: white;
+  color: #151617;
+}
+
+.add_btn:focus-visible {
+  border: orangered solid 2px;
+  background-color: white;
+  outline: none;
+}
+
+.add_btn:hover {
+  border: #525659 solid 2px;
+  background-color: #ff5f24;
+  color: white;
+  outline: none;
+}
+
+article button {
   padding: 7px;
   margin: 10px;
   border-radius: 30px;
@@ -69,34 +92,34 @@ button {
           box-shadow: #525659 0px 1px 2px 2px;
 }
 
-button .icon {
+article button .icon {
   font-size: 30px;
   background: none;
   font-weight: lighter;
 }
 
-button .icon:hover {
+article button .icon:hover {
   color: white;
 }
 
-button:focus {
+article button:focus {
   color: white;
   outline: none;
 }
 
-.validate {
+article .validate {
   background-color: #5ea63f;
 }
 
-.validate:active {
+article .validate:active {
   background-color: #3e6e2a;
 }
 
-.delete {
+article .delete {
   background-color: #e12b31;
 }
 
-.delete:active {
+article .delete:active {
   background-color: #911519;
 }
 
@@ -114,7 +137,7 @@ button:focus {
 
 .meme_attack:hover {
   border: white solid 2px;
-  background-color: #e44146;
+  background-color: orangered;
 }
 
 .meme_attack:focus {
@@ -148,12 +171,18 @@ h1 {
 
 input {
   font-size: 14px;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
 }
 
 h4 {
   font-size: 20px;
   font-family: 'Roboto', sans-serif;
   margin: 0%;
+}
+
+.add_btn {
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  font-weight: bold;
 }
 /*# sourceMappingURL=style.css.map */

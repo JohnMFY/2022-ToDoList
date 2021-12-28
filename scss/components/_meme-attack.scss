@@ -10,7 +10,7 @@
 }
 .meme_attack:hover{
     border: white solid 2px;
-    background-color: lighten($delete-color, 10%);
+    background-color: orangered;
 }
 .meme_attack:focus{
     transform: scale3d(100%, 100%, 100%);

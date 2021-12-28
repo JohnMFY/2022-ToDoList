@@ -30,4 +30,4 @@ article{
     border-radius: 15px;
     box-shadow: $background-color 0px 2px 6px 1px;
 }
-article:hover{box-shadow: 0px 0px 0px 1px;}
+article:hover{box-shadow: lighten($background-color, 30%) 0px 1px 0px 1px;}

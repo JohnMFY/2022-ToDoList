@@ -1,5 +1,5 @@
 /*effect typewritter when landing on page for the placeholder in input
-j'aimerai bien looper cette marde lô */
+j'aimerai bien looper cette marde lô ! */
 let i = 0;
 let placeholder = "";
 const text = " Write your tasks here !";
