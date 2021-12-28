@@ -1,0 +1,22 @@
+button{
+    padding: 7px;
+    margin: 10px;
+    border-radius: 30px ;
+    box-shadow: $background-color 0px 1px 2px 2px;
+    .icon{
+        font-size: 30px;
+        background: none;
+        font-weight:lighter;
+    }
+    .icon:hover{color: white;}
+}
+button:focus{
+    color: white;
+    outline: none;
+}
+
+.validate{ background-color: darken($validate-color, 5%);}
+.validate:active{background-color: darken($validate-color, 20%);}
+
+.delete{background-color: lighten($delete-color, 5%);}
+.delete:active{background-color: darken($delete-color, 15%);}

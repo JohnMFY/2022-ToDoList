@@ -1,4 +1,4 @@
-/*" Write your tasks here !*/
+/*effect typewritter when landing on page for the placeholder in input*/
 let i = 0;
 let placeholder = "";
 const text = " Write your tasks here !";
@@ -14,3 +14,6 @@ function type(){
 type ();
 
 console.log(" Write your tasks here !".length)//24 characters
+
+
+/**/
