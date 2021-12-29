@@ -13,8 +13,8 @@
     outline: none;
 }
 .add_btn:hover{
-    border: $background-color solid 2px;
-    background-color: lighten($hover-focus, 7%);
+    border: $hover-focus solid 2px;
+    background-color: lighten($background-color, 10%);
     color: lighten($background-color,100%);
     outline: none;
 }

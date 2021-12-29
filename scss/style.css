@@ -94,8 +94,8 @@ article div:hover {
 }
 
 .add_btn:hover {
-  border: #525659 solid 2px;
-  background-color: #ff5f24;
+  border: orangered solid 2px;
+  background-color: #6a7074;
   color: white;
   outline: none;
 }
@@ -173,10 +173,11 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 90vh;
   width: 100%;
   padding: 0%;
   margin: 0%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 h1 {
