@@ -40,6 +40,6 @@ article{
     .validate{ background-color: darken($validate-color, 5%);}
     .validate:active{background-color: darken($validate-color, 20%);}
 
-    .delete{background-color: lighten($delete-color, 5%);}
-    .delete:active{background-color: darken($delete-color, 15%);}
+    .fail{background-color: lighten($fail-color, 5%);}
+    .fail:active{background-color: darken($fail-color, 15%);}
 }

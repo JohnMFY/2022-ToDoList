@@ -20,7 +20,11 @@ console.log(" Write your tasks here !".length);//24 characters
 /*CONST*/
 const addButton = document.querySelector('.add_btn');
 const inputText = document.querySelector('#placeholder-id'); // 3 consts pour ADD TODOS
-const todolist = document.querySelector('#todo')
+const todolist = document.querySelector('#todo');
+
+const items = document.querySelector('.item');
+const fail_btn = document.querySelector('.fail');
+const validate_btn = document.querySelector('.validate');
 
 /*ADD TODOS*/
 
@@ -34,16 +38,22 @@ addButton.addEventListener('click', function(event){
     divItem.innerHTML =` 
         <button class="validate"><i class="far fa-check-circle icon"></i></button>
         <h4>${newTodo}</h4>
-        <button class="delete"><i class="far fa-times-circle icon"></i></button>
+        <button class="fail"><i class="far fa-times-circle icon"></i></button>
     `// avec $ je génére un bloc dynamique
 
     todolist.appendChild(divItem) //j'ajoute des taches
 })
 
-/*DELETE 'ITEM'*/
-// <button class="delete"><i class="far fa-times-circle icon"></i></button>
-//envent.target.parentNode.remove()
+/*change backround red*/
+// <button class="fail"><i class="far fa-times-circle icon"></i></button>
+//envent.target.parentNode.remove() penser a implementer la supression de l'item sur fail-btn
+fail_btn.addEventListener('click', function(){
+    items.style.background = '#d41e24'
+    items.style.color = 'white'
+})
 
-
-
-/* VALIDATE TODO */
+/* change backround green*/
+validate_btn.addEventListener('click', function(){
+    items.style.background = '#68b846'
+    items.style.color = 'black'
+})

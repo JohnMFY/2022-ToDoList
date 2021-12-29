@@ -131,11 +131,11 @@ article .validate:active {
   background-color: #3e6e2a;
 }
 
-article .delete {
+article .fail {
   background-color: #e12b31;
 }
 
-article .delete:active {
+article .fail:active {
   background-color: #911519;
 }
 
@@ -186,7 +186,8 @@ h1 {
 }
 
 input {
-  font-size: 14px;
+  font-size: 16px;
+  font-weight: bold;
   font-family: 'Roboto', Arial, Helvetica, sans-serif;
 }
 
