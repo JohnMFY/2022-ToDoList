@@ -44,17 +44,16 @@ addButton.addEventListener('click', function(event){
     todolist.appendChild(divItem) //j'ajoute des taches
 })
 
-// <button class="fail"><i class="far fa-times-circle icon"></i></button>
-//envent.target.parentNode.remove() penser a implementer la supression de l'item sur fail-btn
-
-/*change backround of "item" red*/
-fail_btn.addEventListener('click', function(){
-    items.style.background = '#d41e24'
-    items.style.color = 'white'
-})
-
-/* change backround of "item" green*/
-validate_btn.addEventListener('click', function(){
-    items.style.background = '#68b846'
-    items.style.color = 'black'
-})
+//change color of background if validate or not
+validate_btn.onclick =
+changeColorValidate;
+function changeColorValidate(){
+    items.style.background = '#68b846';
+    items.style.color = 'black';
+}
+fail_btn.onclick =
+changeColorFail;
+function changeColorFail(){
+    items.style.background = '#d41e24';
+    items.style.color = 'white';
+}
