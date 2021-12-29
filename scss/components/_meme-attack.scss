@@ -1,6 +1,6 @@
 .meme_attack{
     position: absolute;
-    transform: scale3d(0%, 0%, 0%);
+    transform: scale3d(0, 0, 0);
     text-align: center;
     color: white;
     background-color: darken($fail-color, 20%);
@@ -13,6 +13,6 @@
     background-color: orangered;
 }
 .meme_attack:focus{
-    transform: scale3d(100%, 100%, 100%);
+    transform: scale3d(1, 1, 1);
     transition: 400ms ease-in;
 }

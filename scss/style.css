@@ -141,8 +141,8 @@ article .fail:active {
 
 .meme_attack {
   position: absolute;
-  -webkit-transform: scale3d(0%, 0%, 0%);
-          transform: scale3d(0%, 0%, 0%);
+  -webkit-transform: scale3d(0, 0, 0);
+          transform: scale3d(0, 0, 0);
   text-align: center;
   color: white;
   background-color: #7b1115;
@@ -157,8 +157,8 @@ article .fail:active {
 }
 
 .meme_attack:focus {
-  -webkit-transform: scale3d(100%, 100%, 100%);
-          transform: scale3d(100%, 100%, 100%);
+  -webkit-transform: scale3d(1, 1, 1);
+          transform: scale3d(1, 1, 1);
   -webkit-transition: 400ms ease-in;
   transition: 400ms ease-in;
 }
