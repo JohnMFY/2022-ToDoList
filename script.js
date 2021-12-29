@@ -28,7 +28,7 @@ const validate_btn = document.querySelector('.validate');
 
 /*ADD TODOS*/
 
-addButton.addEventListener('click', function(event){
+addButton.addEventListener('click', function(){
     const newTodo = inputText.value //newTodo est maintenant = à ce que l'utilisateur ecris dans l'input
     inputText.value = '' //remet la value à vide
     console.log(newTodo)
@@ -39,7 +39,7 @@ addButton.addEventListener('click', function(event){
         <button class="validate"><i class="far fa-check-circle icon"></i></button>
         <h4>${newTodo}</h4>
         <button class="fail"><i class="far fa-times-circle icon"></i></button>
-    `// avec $ je génére un bloc dynamique
+    `// je génére un bloc dynamique
 
     todolist.appendChild(divItem) //j'ajoute des taches
 })
