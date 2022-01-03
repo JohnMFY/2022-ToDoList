@@ -31,25 +31,36 @@ addButton.addEventListener('click', function (event) {
     divItem.classList.add('item')
     divItem.innerHTML = 
     `
-    <button class="validate"><i class="far fa-check-circle icon"></i></button>
     <h4>${taskName}</h4>
     `
+    addValidation(divItem)
     addCross(divItem)
     todolist.appendChild(divItem)
 })
 
 for(let item of items){
-    addCross(item)
+    addValidation(item);
+    addCross(item);
 }
 
+function addValidation(item){
+    //<button class="validate"><i class="far fa-check-circle icon"></i></button>
+    const validation = document.createElement('button')
+    validation.classList.add('validate')
+    validation.innerHTML='<i class="far fa-check-circle icon">'
+    item.appendChild(validation)
+    validation.addEventListener('click', function(event) {
+        
+    })
+}
 function addCross(item){
-    //<button class="fail"><i class="far fa-times-circle icon"></i></button>
+    //<button class="delete"><i class="far fa-times-circle icon"></i></button>
     const cross = document.createElement('button')
     cross.classList.add('delete')
     cross.innerHTML='<i class="far fa-times-circle icon">'
     item.appendChild(cross)
     cross.addEventListener('click', function(event) {
-        event.target.parentNode.remove()
+        
     })
 }
 //change color of background if validate or not
