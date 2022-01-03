@@ -85,11 +85,11 @@ function wordLength(){
     const minLenght = 3
     if (inputWordLength < minLenght) {
         input.classList.add("not_valid")
-        this.next.removeEventListener('click', {passive: false})
+        //this.next.removeEventListener('click', {passive: false})
     }
     if(inputWordLength == 0) {
         input.classList.remove("not_valid")
-        this.nextSibling.removeEventListener('click', true)
+        //this.nextSibling.removeEventListener('click', true)
     } else if (inputWordLength >= minLenght) {
         input.classList.remove("not_valid")
     }
