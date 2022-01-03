@@ -53,9 +53,10 @@ function addValidation(item){
     validation.innerHTML='<i class="far fa-check-circle icon">'
     item.appendChild(validation)
     validation.addEventListener('click', function(event) {
-        
+
     })
 }
+
 function addCross(item){
     //<button class="delete"><i class="far fa-times-circle icon"></i></button>
     const cross = document.createElement('button')
@@ -80,9 +81,24 @@ X5.addEventListener('click', function(event){
     addCross(divItem)
     todolist.appendChild(divItem) 
 })
-
-//mettre un minimum du characters pour les tasks
-
-
-
+/***********************************************/
+//MINIMUM OF 3 CHARACTERS FOR INPUT
+const input = document.getElementById("newitem")
+console.log(input)
+input.addEventListener("input", wordLength)
+function wordLength(){
+    const inputWordLength = input.value.length
+    console.log(inputWordLength)
+    const minLenght = 3
+    if (inputWordLength < minLenght) {
+        input.classList.add("not_valid")
+    }
+    if(inputWordLength == 0) {
+        input.classList.remove("not_valid")
+        addButton.removeEventListener('click')
+    } else if (inputWordLength >= minLenght) {
+        input.classList.remove("not_valid")
+        addButton.removeEventListener('click')
+    }
+}
 //option de modification

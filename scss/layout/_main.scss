@@ -49,12 +49,17 @@ article{
     }
     div:hover{box-shadow: lighten($background-color, 30%) 0px 1px 0px 1px;}
     
-    .valid{
+    
+}
+.valid{
         color: black;
         background-color: $validate-color;
     }
-   .not_valid{
-        color: white;
-         background-color: $fail-color;
-    }
+.not_valid{
+    color: white;
+    background-color: $fail-color;
+}
+.neutral{
+    color: black;
+    background-color: white;
 }

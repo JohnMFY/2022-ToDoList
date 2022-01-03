@@ -89,14 +89,19 @@ article div:hover {
           box-shadow: #9ea3a6 0px 1px 0px 1px;
 }
 
-article .valid {
+.valid {
   color: black;
   background-color: #68b846;
 }
 
-article .not_valid {
+.not_valid {
   color: white;
   background-color: #d41e24;
+}
+
+.neutral {
+  color: black;
+  background-color: white;
 }
 
 #add_btn {
