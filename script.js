@@ -53,7 +53,7 @@ function addValidation(item){
     validation.innerHTML='<i class="far fa-check-circle icon">'
     item.appendChild(validation)
     validation.addEventListener('click', function(event) {
-
+        this.parentElement.classList.add("valid")
     })
 }
 
@@ -64,22 +64,15 @@ function addCross(item){
     cross.innerHTML='<i class="far fa-times-circle icon">'
     item.appendChild(cross)
     cross.addEventListener('click', function(event) {
-        
+        this.parentElement.classList.add("not_valid")
     })
 }
 /************************************************/
 //CREATION OF A BUTTON WHO ADD 5 TODOS
 const X5 = document.querySelector('#add_5')
 X5.addEventListener('click', function(event){
-    const divItem = document.createElement('div')
-    divItem.classList.add('item')
     const todos = ['The', 'Cake', 'Is', 'A', 'Lie'];
-    divItem.innerHTML = `
-    <h4>${todos}</h4>
-    `
-    addValidation(divItem)
-    addCross(divItem)
-    todolist.appendChild(divItem) 
+    console.log(todos)
 })
 /***********************************************/
 //MINIMUM OF 3 CHARACTERS FOR INPUT
