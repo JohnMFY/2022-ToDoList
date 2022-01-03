@@ -122,6 +122,29 @@ article .not_valid {
   outline: none;
 }
 
+#add_5 {
+  width: 7%;
+  padding: 1%;
+  margin: 3% 0% 0% 0%;
+  border: #525659 solid 2px;
+  border-radius: 15px;
+  background-color: white;
+  color: #151617;
+}
+
+#add_5:focus-visible {
+  border: orangered solid 2px;
+  background-color: white;
+  outline: none;
+}
+
+#add_5:hover {
+  border: orangered solid 2px;
+  background-color: #6a7074;
+  color: white;
+  outline: none;
+}
+
 article button {
   padding: 7px;
   margin: 10px;

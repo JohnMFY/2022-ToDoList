@@ -19,6 +19,27 @@
     outline: none;
 }
 
+#add_5{
+    width: 7%;
+    padding: 1%;
+    margin: 3% 0% 0% 0%;
+    border: $background-color solid 2px;
+    border-radius:  15px;
+    background-color: lighten($background-color, 90%);
+    color: darken($background-color, 25%);
+}
+#add_5:focus-visible{
+    border: $hover-focus solid 2px;
+    background-color: lighten($background-color, 90%);
+    outline: none;
+}
+#add_5:hover{
+    border: $hover-focus solid 2px;
+    background-color: lighten($background-color, 10%);
+    color: lighten($background-color,100%);
+    outline: none;
+}
+
 article{
     button{
         padding: 7px;
