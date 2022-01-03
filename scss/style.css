@@ -36,6 +36,17 @@ section input:focus-visible {
   border: orangered solid 2px;
 }
 
+#additem {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+}
+
 article {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -78,7 +89,17 @@ article div:hover {
           box-shadow: #9ea3a6 0px 1px 0px 1px;
 }
 
-.add_btn {
+article .valid {
+  color: black;
+  background-color: #68b846;
+}
+
+article .not_valid {
+  color: white;
+  background-color: #d41e24;
+}
+
+#add_btn {
   margin: 3% 0% 0% 0%;
   padding: 1.5%;
   width: 25%;
@@ -88,13 +109,13 @@ article div:hover {
   color: #151617;
 }
 
-.add_btn:focus-visible {
+#add_btn:focus-visible {
   border: orangered solid 2px;
   background-color: white;
   outline: none;
 }
 
-.add_btn:hover {
+#add_btn:hover {
   border: orangered solid 2px;
   background-color: #6a7074;
   color: white;
@@ -132,11 +153,11 @@ article .validate:active {
   background-color: #3e6e2a;
 }
 
-article .fail {
+article .delete {
   background-color: #e12b31;
 }
 
-article .fail:active {
+article .delete:active {
   background-color: #911519;
 }
 
@@ -199,7 +220,7 @@ h4 {
   margin: 0%;
 }
 
-.add_btn {
+#add_btn {
   font-family: 'Roboto', sans-serif;
   font-size: 14px;
   font-weight: bold;
