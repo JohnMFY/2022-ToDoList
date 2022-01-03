@@ -56,7 +56,6 @@ function addValidation(item){
         this.parentElement.classList.add("valid")
     })
 }
-
 function addCross(item){
     //<button class="delete"><i class="far fa-times-circle icon"></i></button>
     const cross = document.createElement('button')
@@ -65,13 +64,14 @@ function addCross(item){
     item.appendChild(cross)
     cross.addEventListener('click', function(event) {
         this.parentElement.classList.add("not_valid")
+        this.parentElement.remove()
     })
 }
 /************************************************/
 //CREATION OF A BUTTON WHO ADD 5 TODOS
 const X5 = document.querySelector('#add_5')
 X5.addEventListener('click', function(event){
-    const todos = ['The', 'Cake', 'Is', 'A', 'Lie'];
+    const todos = ['The', 'Cake', 'Is', 'A', 'Lie'];//forEach() probably the solution
     console.log(todos)
 })
 /***********************************************/
@@ -85,13 +85,14 @@ function wordLength(){
     const minLenght = 3
     if (inputWordLength < minLenght) {
         input.classList.add("not_valid")
+        this.next.removeEventListener('click', {passive: false})
     }
     if(inputWordLength == 0) {
         input.classList.remove("not_valid")
-        addButton.removeEventListener('click')
+        this.nextSibling.removeEventListener('click', true)
     } else if (inputWordLength >= minLenght) {
         input.classList.remove("not_valid")
-        addButton.removeEventListener('click')
     }
 }
+/*******************************************/
 //option de modification
