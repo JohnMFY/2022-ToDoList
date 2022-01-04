@@ -14,7 +14,7 @@ type ();
 */
 
 /************************************/
-//ADD NEW TODO//
+//ADD NEW TODO// 100%
 const addButton = document.querySelector('#add_btn')
 const inputText = document.querySelector('#newitem')
 const todolist = document.querySelector ('#todolist')
@@ -39,12 +39,12 @@ addButton.addEventListener('click', function (event) {
 })
 
 /**************************************/
-//VALIDATION & DELETE BUTTON 
+//VALIDATION & DELETE BUTTON 100%
 for(let item of items){
     addValidation(item);
     addCross(item);
 }
-//VALIDATION BUTTON
+//VALIDATION BUTTON 100%
 function addValidation(item){
     //<button class="validate"><i class="far fa-check-circle icon"></i></button>
     const validation = document.createElement('button')
@@ -56,7 +56,7 @@ function addValidation(item){
         this.parentElement.classList.add("val_anim")
     })
 }
-//DELETE BUTTON
+//DELETE BUTTON 90%
 function addCross(item){
     //<button class="delete"><i class="far fa-times-circle icon"></i></button>
     const cross = document.createElement('button')
@@ -66,20 +66,29 @@ function addCross(item){
     cross.addEventListener('click', function(event) {
         this.parentElement.classList.add("not_valid")
         this.parentElement.classList.add("del_anim")
-        this.parentElement.remove()
+        this.parentElement.remove()// trouver un moyen de delay pour que l'animation se fasse solution probably setTimeout()     
     })
 }
 
 /************************************************/
-//BUTTON WHO ADD 5 TODOS
+//BUTTON WHO ADD 5 TODOS 50%
 const X5 = document.querySelector('#add_5')
 X5.addEventListener('click', function(event){
     const todos = ['The', 'Cake', 'Is', 'A', 'Lie'];//forEach() probably the solution
     console.log(todos)
+    todos.forEach(element => {
+        const divItem = document.createElement('div')
+        divItem.classList.add('item')
+        divItem.innerHTML = 
+        `<h4>${todos}</h4>`
+        addValidation(divItem)
+        addCross(divItem)
+        todolist.appendChild(divItem)
+    });
 })
 
 /***********************************************/
-//MINIMUM OF 3 CHARACTERS FOR INPUT
+//MINIMUM OF 3 CHARACTERS FOR INPUT 75%
 const input = document.getElementById("newitem")
 console.log(input)
 input.addEventListener("input", wordLength)
@@ -100,4 +109,4 @@ function wordLength(){
 }
 
 /*******************************************/
-//option de modification
+//MODIFICATION OF TODO 0%
