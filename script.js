@@ -71,16 +71,15 @@ function addCross(item){
 }
 
 /************************************************/
-//BUTTON WHO ADD 5 TODOS 50%
+//BUTTON WHO ADD 5 TODOS 100%
 const X5 = document.querySelector('#add_5')
 X5.addEventListener('click', function(event){
-    const todos = ['The', 'Cake', 'Is', 'A', 'Lie'];//forEach() probably the solution
+    const todos = [{name:'The'},{name:'Cake'},{name:'Is'},{name:'A'},{name:'Lie'}];//forEach() probably the solution
     console.log(todos)
-    todos.forEach(element => {
+    todos.forEach(function(todo) {
         const divItem = document.createElement('div')
         divItem.classList.add('item')
-        divItem.innerHTML = 
-        `<h4>${todos}</h4>`
+        divItem.innerHTML = `<h4>${todo.name}</h4>`
         addValidation(divItem)
         addCross(divItem)
         todolist.appendChild(divItem)
@@ -107,6 +106,5 @@ function wordLength(){
         input.classList.remove("not_valid")
     }
 }
-
 /*******************************************/
 //MODIFICATION OF TODO 0%
