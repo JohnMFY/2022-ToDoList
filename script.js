@@ -39,13 +39,12 @@ addButton.addEventListener('click', function (event) {
 })
 
 /**************************************/
-//VALIDATION & DELETE BUTTON
-//change color of background if validate or not
+//VALIDATION & DELETE BUTTON 
 for(let item of items){
     addValidation(item);
     addCross(item);
 }
-
+//VALIDATION BUTTON
 function addValidation(item){
     //<button class="validate"><i class="far fa-check-circle icon"></i></button>
     const validation = document.createElement('button')
@@ -54,8 +53,10 @@ function addValidation(item){
     item.appendChild(validation)
     validation.addEventListener('click', function(event) {
         this.parentElement.classList.add("valid")
+        this.parentElement.classList.add("val_anim")
     })
 }
+//DELETE BUTTON
 function addCross(item){
     //<button class="delete"><i class="far fa-times-circle icon"></i></button>
     const cross = document.createElement('button')
@@ -64,16 +65,19 @@ function addCross(item){
     item.appendChild(cross)
     cross.addEventListener('click', function(event) {
         this.parentElement.classList.add("not_valid")
+        this.parentElement.classList.add("del_anim")
         this.parentElement.remove()
     })
 }
+
 /************************************************/
-//CREATION OF A BUTTON WHO ADD 5 TODOS
+//BUTTON WHO ADD 5 TODOS
 const X5 = document.querySelector('#add_5')
 X5.addEventListener('click', function(event){
     const todos = ['The', 'Cake', 'Is', 'A', 'Lie'];//forEach() probably the solution
     console.log(todos)
 })
+
 /***********************************************/
 //MINIMUM OF 3 CHARACTERS FOR INPUT
 const input = document.getElementById("newitem")
@@ -85,7 +89,7 @@ function wordLength(){
     const minLenght = 3
     if (inputWordLength < minLenght) {
         input.classList.add("not_valid")
-        //this.next.removeEventListener('click', {passive: false})
+        //addButton.removeEventListener('click', true)
     }
     if(inputWordLength == 0) {
         input.classList.remove("not_valid")
@@ -94,5 +98,6 @@ function wordLength(){
         input.classList.remove("not_valid")
     }
 }
+
 /*******************************************/
 //option de modification

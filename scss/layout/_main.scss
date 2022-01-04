@@ -59,3 +59,9 @@ article{
     color: white;
     background-color: $fail-color;
 }
+.del_anim{
+    animation: del_anim 500ms ease-in-out;
+}
+.val_anim{
+    animation: val_anim 400ms ease-in-out;
+}

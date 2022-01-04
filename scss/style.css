@@ -1,3 +1,79 @@
+@-webkit-keyframes del_anim {
+  0% {
+    -webkit-transform: translatex(0);
+            transform: translatex(0);
+  }
+  25% {
+    -webkit-transform: translatex(-5%);
+            transform: translatex(-5%);
+  }
+  50% {
+    -webkit-transform: translatex(5%);
+            transform: translatex(5%);
+  }
+  75% {
+    -webkit-transform: translatex(-2%);
+            transform: translatex(-2%);
+  }
+  100% {
+    -webkit-transform: translatex(2%);
+            transform: translatex(2%);
+  }
+}
+
+@keyframes del_anim {
+  0% {
+    -webkit-transform: translatex(0);
+            transform: translatex(0);
+  }
+  25% {
+    -webkit-transform: translatex(-5%);
+            transform: translatex(-5%);
+  }
+  50% {
+    -webkit-transform: translatex(5%);
+            transform: translatex(5%);
+  }
+  75% {
+    -webkit-transform: translatex(-2%);
+            transform: translatex(-2%);
+  }
+  100% {
+    -webkit-transform: translatex(2%);
+            transform: translatex(2%);
+  }
+}
+
+@-webkit-keyframes val_anim {
+  0% {
+    -webkit-transform: scale3d(1, 1, 1);
+            transform: scale3d(1, 1, 1);
+  }
+  50% {
+    -webkit-transform: scale3d(1.1, 1.1, 1.1);
+            transform: scale3d(1.1, 1.1, 1.1);
+  }
+  100% {
+    -webkit-transform: scale3d(1, 1, 1);
+            transform: scale3d(1, 1, 1);
+  }
+}
+
+@keyframes val_anim {
+  0% {
+    -webkit-transform: scale3d(1, 1, 1);
+            transform: scale3d(1, 1, 1);
+  }
+  50% {
+    -webkit-transform: scale3d(1.1, 1.1, 1.1);
+            transform: scale3d(1.1, 1.1, 1.1);
+  }
+  100% {
+    -webkit-transform: scale3d(1, 1, 1);
+            transform: scale3d(1, 1, 1);
+  }
+}
+
 section {
   background-color: white;
   display: -webkit-box;
@@ -97,6 +173,16 @@ article div:hover {
 .not_valid {
   color: white;
   background-color: #d41e24;
+}
+
+.del_anim {
+  -webkit-animation: del_anim 500ms ease-in-out;
+          animation: del_anim 500ms ease-in-out;
+}
+
+.val_anim {
+  -webkit-animation: val_anim 400ms ease-in-out;
+          animation: val_anim 400ms ease-in-out;
 }
 
 #add_btn {

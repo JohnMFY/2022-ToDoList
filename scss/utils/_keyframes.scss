@@ -1,0 +1,14 @@
+@keyframes del_anim {  
+
+    0%{transform: translatex(0);}
+    25%{transform: translatex(-5%);}
+    50%{transform: translatex(5%);}
+    75%{transform: translatex(-2%);}
+    100%{transform: translatex(2%);}
+}
+
+@keyframes val_anim {
+    0%{transform: scale3d(1,1,1);}
+    50%{transform: scale3d(1.1,1.1,1.1);}
+    100%{transform: scale3d(1,1,1);}
+}
