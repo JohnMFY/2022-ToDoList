@@ -59,10 +59,16 @@ article{
         outline: none;
     }
 
-    .validate{ background-color: darken($validate-color, 5%);}
+    .validate{ 
+        background-color: darken($validate-color, 5%);
+        order: 1;
+    }
     .validate:active{background-color: darken($validate-color, 20%);}
 
-    .delete{background-color: lighten($fail-color, 5%);}
+    .delete{
+        background-color: lighten($fail-color, 5%);
+        order: 3;
+    }
     .delete:active{background-color: darken($fail-color, 15%);}
     .edit{font-size: 20px;}
     .edit:active{color: $background-color;}

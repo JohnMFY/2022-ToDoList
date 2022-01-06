@@ -143,9 +143,9 @@ article div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-flow: row nowrap;
@@ -259,6 +259,9 @@ article button:focus {
 
 article .validate {
   background-color: #5ea63f;
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
 }
 
 article .validate:active {
@@ -267,6 +270,9 @@ article .validate:active {
 
 article .delete {
   background-color: #e12b31;
+  -webkit-box-ordinal-group: 4;
+      -ms-flex-order: 3;
+          order: 3;
 }
 
 article .delete:active {
@@ -338,6 +344,9 @@ h4 {
   font-size: 20px;
   font-family: 'Roboto', sans-serif;
   margin: 0%;
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
 }
 
 #add_btn {

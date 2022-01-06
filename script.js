@@ -56,7 +56,7 @@ function addValidation(item){
         this.parentElement.classList.add("val_anim")
     })
 }
-//DELETE BUTTON 90%
+//DELETE BUTTON 100%
 function addCross(item){
     //<button class="delete"><i class="far fa-times-circle icon"></i></button>
     
@@ -70,32 +70,24 @@ function addCross(item){
         this.parentElement.classList.add("del_anim")
 
         setTimeout(deleteTodo, 600);
-
         function deleteTodo(){
             cross.parentElement.remove()
         } 
-
-    })
-
-   
-
+    })   
 }
-
-
-
 
 /*******************************************/
 //MODIFICATION OF TODO 10%
 
-function addEdit(){
+/*function addEdit(){
     const edition = document.createElement('button')
     edition.classList.add('edit')
     edit.innerHTML='<i class="fas fa-edit">'
     item.appendChild(edition)
-    //edit.addEventListener('click', function(event){
+    edit.addEventListener('click', function(event){
 
-    //})
-}
+    })
+}*/
 
 /************************************************/
 //BUTTON WHO ADD 5 TODOS 100%
