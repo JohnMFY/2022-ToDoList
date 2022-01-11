@@ -16,7 +16,7 @@ function testAdd(){
 
     const divItem = document.createElement('div')
     divItem.classList.add('item')
-    divItem.innerHTML = `<h4>${taskName}</h4>`
+    divItem.innerHTML = `<h4>${taskName}</h4>` 
     addValidation(divItem)
     addCross(divItem)
     addEdit(divItem)
@@ -70,14 +70,11 @@ function addCross(item){
     edition.innerHTML='<i class="fas fa-edit">'
     item.appendChild(edition)
 
-    /*
+    
     edition.addEventListener('click', function(event) {
-        
-    })
-    */
-
+        alert('Delete the message and rewrite your task in the input')
+    })  
 }
-
 /************************************************/
 //BUTTON WHO ADD 5 TODOS 100%
 const X5 = document.querySelector('#add_5')
