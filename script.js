@@ -72,7 +72,7 @@ function addCross(item){
 
     
     edition.addEventListener('click', function(event) {
-        alert('Delete the message and rewrite your task in the input')
+        prompt('Rewrite your TODO')
     })  
 }
 /************************************************/
