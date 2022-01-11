@@ -1,18 +1,3 @@
-/*effect typewritter when landing on page for the placeholder in input
-j'aimerai bien looper cette marde lô ! PROBABLY setInterval()
-let i = 0;
-let placeholder = "";
-const text = " Write your tasks here !";
-const speed = 150;
-function type(){
-    placeholder += text.charAt(i);
-    document.getElementById("placeholder-id").setAttribute("placeholder",placeholder);
-    i++;
-    setTimeout (type, speed)
-}
-type ();
-*/
-
 /************************************/
 //ADD NEW TODO// 100%
 const addButton = document.querySelector('#add_btn')
@@ -34,15 +19,17 @@ function testAdd(){
     divItem.innerHTML = `<h4>${taskName}</h4>`
     addValidation(divItem)
     addCross(divItem)
-    //addEdit(divItem)
+    addEdit(divItem)
     todolist.appendChild(divItem)
+
 }
 
 /**************************************/
-//VALIDATION & DELETE BUTTON 100%
+//VALIDATION, MODIFICATION & DELETE BUTTON 100%
 for(let item of items){
     addValidation(item);
     addCross(item);
+    addEdit(item);
 }
 //VALIDATION BUTTON 100%
 function addValidation(item){
@@ -75,19 +62,21 @@ function addCross(item){
         } 
     })   
 }
-
-/*******************************************/
-//MODIFICATION OF TODO 10%
-
-/*function addEdit(){
+//MODIFICATION OF TODO 0%
+ //<button class="edit"><i class="fas fa-edit icon"></i></button>
+ function addEdit(item){
     const edition = document.createElement('button')
     edition.classList.add('edit')
-    edit.innerHTML='<i class="fas fa-edit">'
+    edition.innerHTML='<i class="fas fa-edit">'
     item.appendChild(edition)
-    edit.addEventListener('click', function(event){
 
+    /*
+    edition.addEventListener('click', function(event) {
+        
     })
-}*/
+    */
+
+}
 
 /************************************************/
 //BUTTON WHO ADD 5 TODOS 100%
@@ -113,7 +102,7 @@ wordLength()
 console.log(wordLength)
 input.addEventListener("input", wordLength)
 function wordLength(){
-    
+
     const inputWordLength = input.value.length
     console.log(inputWordLength)
     const minLenght = 3
@@ -121,7 +110,7 @@ function wordLength(){
         input.classList.add("not_valid")
         const addButton = document.querySelector('#add_btn')
         console.log(addButton)
-        addButton.removeEventListener('click', testAdd )
+        addButton.removeEventListener('click', testAdd )   
     }
     if(inputWordLength == 0) {
         input.classList.remove("not_valid")

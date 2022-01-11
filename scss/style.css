@@ -185,6 +185,10 @@ article div:hover {
           animation: val_anim 400ms ease-in-out;
 }
 
+.hidden {
+  display: none;
+}
+
 #add_btn {
   margin: 3% 0% 0% 0%;
   padding: 1.5%;
@@ -270,9 +274,9 @@ article .validate:active {
 
 article .delete {
   background-color: #e12b31;
-  -webkit-box-ordinal-group: 4;
-      -ms-flex-order: 3;
-          order: 3;
+  -webkit-box-ordinal-group: 5;
+      -ms-flex-order: 4;
+          order: 4;
 }
 
 article .delete:active {
@@ -281,10 +285,19 @@ article .delete:active {
 
 article .edit {
   font-size: 20px;
+  -webkit-box-ordinal-group: 4;
+      -ms-flex-order: 3;
+          order: 3;
+  margin: 1%;
+  padding: 1% 0.2% 1% 0.5%;
 }
 
 article .edit:active {
-  color: #525659;
+  background-color: #212324;
+}
+
+article .edit:focus {
+  background-color: #212324;
 }
 
 .meme_attack {
