@@ -16,7 +16,9 @@ function testAdd(){
 
     const divItem = document.createElement('div')
     divItem.classList.add('item')
-    divItem.innerHTML = `<h4>${taskName}</h4>` 
+    divItem.innerHTML = `<h4><input type="text" value="${taskName}"/></h4>`
+    divItem.querySelector('h4').setAttribute('id', 'task')
+    divItem.querySelector('h4').querySelector('input').setAttribute('readonly', true)
     addValidation(divItem)
     addCross(divItem)
     addEdit(divItem)
@@ -62,19 +64,31 @@ function addCross(item){
         } 
     })   
 }
-//MODIFICATION OF TODO 0%
+//MODIFICATION OF TODO 70%
  //<button class="edit"><i class="fas fa-edit icon"></i></button>
  function addEdit(item){
-    const edition = document.createElement('button')
-    edition.classList.add('edit')
-    edition.innerHTML='<i class="fas fa-edit">'
-    item.appendChild(edition)
-
-    
-    edition.addEventListener('click', function(event) {
-        prompt('Rewrite your TODO')
-    })  
+    const edit = document.createElement('button')
+    edit.classList.add('edit')
+    edit.innerHTML='<i class="fas fa-edit">'
+    const editValid = document.createElement('button')
+    editValid.classList.add('edit')
+    editValid.classList.add('hidden')
+    editValid.innerHTML='<i class="fas fa-clipboard-check">'
+    item.appendChild(edit)
+    item.appendChild(editValid)
+       
+edit.addEventListener('click', function(){
+    input.readOnly = false;
+    edit.classList.add("hidden")
+    editValid.classList.remove("hidden")
+})
+editValid.addEventListener('click', function(){
+    input.readOnly = true;
+    edit.classList.remove("hidden")
+    editValid.classList.add("hidden")
+})
 }
+
 /************************************************/
 //BUTTON WHO ADD 5 TODOS 100%
 const X5 = document.querySelector('#add_5')
