@@ -76,6 +76,19 @@ article{
         margin: 1%;
         padding: 1% 0.75%;
     }
-    .edit:active{background-color: darken($background-color, 20%);}
-    .edit:focus{background-color: darken($background-color, 20%);}
+    .edit:hover{
+        background-color: darken($background-color, 10%);
+        color: white;
+    }
+    .editValid{
+        font-size: 24px;
+        order: 3;
+        margin: 1%;
+        padding: 0.6% 1.2%;
+        
+    }
+    .editValid:hover{
+        color: darken($validate-color, 2%);
+    }
+    
 }
