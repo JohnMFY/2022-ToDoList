@@ -5,7 +5,7 @@ section{
     flex-flow:column nowrap ;
     text-align: center;
     align-items: center;
-    width: 33%;
+    width: 40%;
     margin: 5% 0%;
     border-radius: 15px;
     box-shadow: lighten($background-color, 20%) 1px 1px 4px 5px;
@@ -46,19 +46,19 @@ article{
     border-radius: 15px;
     box-shadow: $background-color 0px 2px 6px 1px;
         h4{
+            width: 100%;
             input{
                 box-shadow: none;
                 border: none;
                 margin: 1%;
+                width: 90%;
             }
             input:focus{
                border: none;
             }
         }
     }
-    div:hover{box-shadow: lighten($background-color, 30%) 0px 1px 0px 1px;}
-    
-    
+    div:hover{box-shadow: lighten($background-color, 30%) 0px 1px 0px 1px;}  
 }
 .valid{
         color: black;

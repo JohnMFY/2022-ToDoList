@@ -87,7 +87,7 @@ section {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 33%;
+  width: 40%;
   margin: 5% 0%;
   border-radius: 15px;
   -webkit-box-shadow: #84898d 1px 1px 4px 5px;
@@ -160,11 +160,16 @@ article div {
           box-shadow: #525659 0px 2px 6px 1px;
 }
 
+article div h4 {
+  width: 100%;
+}
+
 article div h4 input {
   -webkit-box-shadow: none;
           box-shadow: none;
   border: none;
   margin: 1%;
+  width: 90%;
 }
 
 article div h4 input:focus {
@@ -225,7 +230,7 @@ article div:hover {
 
 #add_5 {
   width: 7%;
-  padding: 1%;
+  padding: 1% 0%;
   margin: 3% 0% 2% 0%;
   border: #525659 solid 2px;
   border-radius: 15px;
@@ -381,6 +386,7 @@ h4 {
   -webkit-box-ordinal-group: 3;
       -ms-flex-order: 2;
           order: 2;
+  width: auto;
 }
 
 h4 input {

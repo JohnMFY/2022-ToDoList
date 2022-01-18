@@ -68,7 +68,6 @@ function addCross(item){
  //<button class="edit"><i class="fas fa-edit icon"></i></button>
 
  function addEdit(item){
-    const inputTodo = document.querySelector('task')
 
     const edit = document.createElement('button')
     edit.classList.add('edit')
@@ -103,7 +102,7 @@ editValid.addEventListener('click', function(){
 //BUTTON WHO ADD 5 TODOS 100%
 const X5 = document.querySelector('#add_5')
 X5.addEventListener('click', function(event){
-    const todos = [{name:'The'},{name:'Cake'},{name:'Is'},{name:'A'},{name:'Lie'}];//forEach() probably the solution : IT WAS 😏
+    const todos = [{name:'Go to the gym'},{name:'Cook'},{name:'Clean the flat'},{name:'Work on personal project'},{name:'Read current novel'}];//forEach() probably the solution : IT WAS 😏
     console.log(todos.length)
     todos.forEach(function(todo) {
         const divItem = document.createElement('div')
