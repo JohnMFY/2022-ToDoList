@@ -81,22 +81,25 @@ function addCross(item){
     item.appendChild(edit)
     item.appendChild(editValid)
        
-edit.addEventListener('click', function(){
+    const inputTodo = document.getElementsByClassName("task")[0];
 
-    document.getElementsByClassName("task").removeAttribute("readonly");
-    console.log("test edit")
+        edit.addEventListener('click', function(){
 
-    edit.classList.add("hidden")
-    editValid.classList.remove("hidden")
-})
-editValid.addEventListener('click', function(){
+            inputTodo.removeAttribute("readonly");
+            console.log("test edit")
 
-    document.getElementsByClassName("task").setAttribute('readonly', true)
-    console.log('test valid')
+            edit.classList.add("hidden")
+            editValid.classList.remove("hidden")
+        })
+        editValid.addEventListener('click', function(){
 
-    edit.classList.remove("hidden")
-    editValid.classList.add("hidden")
-})
+            inputTodo.setAttribute('readonly', true)
+            console.log('test valid')
+
+            edit.classList.remove("hidden")
+            editValid.classList.add("hidden")
+        })
+    
 }
 /************************************************/
 //BUTTON WHO ADD 5 TODOS 100%
