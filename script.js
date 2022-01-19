@@ -81,24 +81,31 @@ function addCross(item){
     item.appendChild(edit)
     item.appendChild(editValid)
        
-    const inputTodo = document.getElementsByClassName("task")[0];
+    
 
-        edit.addEventListener('click', function(){
+    edit.addEventListener('click', function(){
 
-            inputTodo.removeAttribute("readonly");
-            console.log("test edit")
+        const inputTodo = document.getElementsByClassName("task");
+            for(let i = 0; i < inputTodo.length; i++) {
+                inputTodo[i].removeAttribute('readonly');
+            }
+        console.log("test edit")
 
-            edit.classList.add("hidden")
-            editValid.classList.remove("hidden")
-        })
-        editValid.addEventListener('click', function(){
+        edit.classList.add("hidden")
+        editValid.classList.remove("hidden")
+    })
 
-            inputTodo.setAttribute('readonly', true)
-            console.log('test valid')
+    editValid.addEventListener('click', function(){
 
-            edit.classList.remove("hidden")
-            editValid.classList.add("hidden")
-        })
+        const inputTodo = document.getElementsByClassName("task");
+            for (let i = 0; i < inputTodo.length; i++) {
+                inputTodo[i].setAttribute('readonly', true)
+            }
+        console.log('test valid')
+
+        edit.classList.remove("hidden")
+        editValid.classList.add("hidden")
+    })
     
 }
 /************************************************/
