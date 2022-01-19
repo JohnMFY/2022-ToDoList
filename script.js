@@ -17,7 +17,7 @@ function testAdd(){
     const divItem = document.createElement('div')
     divItem.classList.add('item')
     divItem.innerHTML = `<h4><input type="text" value="${taskName}"/></h4>`
-    divItem.querySelector('h4').querySelector('input').setAttribute('id', 'task')
+    divItem.querySelector('h4').querySelector('input').setAttribute('class', 'task')
     divItem.querySelector('h4').querySelector('input').setAttribute('readonly', true)
     addValidation(divItem)
     addCross(divItem)
@@ -83,7 +83,7 @@ function addCross(item){
        
 edit.addEventListener('click', function(){
 
-    document.getElementById("task").removeAttribute("readonly");
+    document.getElementsByClassName("task").removeAttribute("readonly");
     console.log("test edit")
 
     edit.classList.add("hidden")
@@ -91,7 +91,7 @@ edit.addEventListener('click', function(){
 })
 editValid.addEventListener('click', function(){
 
-    document.getElementById("task").setAttribute('readonly', true)
+    document.getElementsByClassName("task").setAttribute('readonly', true)
     console.log('test valid')
 
     edit.classList.remove("hidden")
@@ -102,7 +102,7 @@ editValid.addEventListener('click', function(){
 //BUTTON WHO ADD 5 TODOS 100%
 const X5 = document.querySelector('#add_5')
 X5.addEventListener('click', function(event){
-    const todos = [{name:'Go to the gym'},{name:'Cook'},{name:'Clean the flat'},{name:'Work on personal project'},{name:'Read current novel'}];//forEach() probably the solution : IT WAS 😏
+    const todos = [{name:'Go to the gym'},{name:'Cook'},{name:'Clean the flat'},{name:'Work on personal project'},{name:'Read current novel'}];
     console.log(todos.length)
     todos.forEach(function(todo) {
         const divItem = document.createElement('div')
